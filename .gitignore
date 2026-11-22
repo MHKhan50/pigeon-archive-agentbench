@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+reports/*.json
+data/cache/*
+!data/cache/.gitkeep
+
+# Generated Python package metadata
+*.egg-info/
