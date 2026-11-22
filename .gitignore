@@ -9,3 +9,7 @@ data/cache/*
 
 # Generated Python package metadata
 *.egg-info/
+
+# Generated build and distribution artefacts
+build/
+dist/

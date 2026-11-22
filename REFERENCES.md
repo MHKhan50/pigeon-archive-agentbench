@@ -5,3 +5,5 @@
 - Library of Congress, Pigeons in War: https://guides.loc.gov/chronicling-america-war-pigeons
 - Scottish Archives for Schools, Carrier Pigeons: https://www.scottisharchivesforschools.org/firstWorldWar/CarrierPigeons.asp
 - Smithsonian National Museum of American History, Cher Ami fact sheet: https://americanhistory.si.edu/press/fact-sheets/cher-ami-fact-sheet-century-myth-and-public-memory
+
+- U.S. Naval History and Heritage Command, The Navy's Use of Carrier Pigeons: https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/navy-pigeons.html

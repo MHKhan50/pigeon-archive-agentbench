@@ -26,7 +26,7 @@ DOCUMENTS = [
         "url": "https://guides.loc.gov/chronicling-america-war-pigeons",
         "text": ("The Library of Congress guide points researchers to digitized historic newspapers about "
                  "military carrier pigeons in the First and Second World Wars. It describes pigeons carrying "
-                 "messages back to home coops behind the lines and identifies primary-source newspaper material.")
+                 " messages back to home coops behind the lines and identifies primary-source newspaper material.")
     },
     {
         "id": "scottish-archives",

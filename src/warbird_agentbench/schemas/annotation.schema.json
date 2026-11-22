@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MHKhan50/warbird-agentbench/blob/main/src/warbird_agentbench/schemas/annotation.schema.json",
+  "title": "WarBird-AgentBench Historical Event Annotation",
+  "description": "Schema for source-grounded historical carrier-pigeon event annotations. This schema validates structure; source-aware evidence and offset checks are performed by the Python validator.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "source_id",
+    "evidence_text",
+    "evidence_start",
+    "evidence_end",
+    "date",
+    "date_status",
+    "force_service",
+    "location",
+    "communication_role",
+    "event_action",
+    "event_outcome",
+    "confidence",
+    "uncertainty_note",
+    "annotator_id",
+    "annotation_status"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "evidence_end": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_status": {
+      "enum": [
+        "explicit",
+        "partial",
+        "unknown",
+        "ambiguous"
+      ]
+    },
+    "force_service": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "communication_role": {
+      "enum": [
+        "message_delivery",
+        "message_receipt",
+        "messenger_service",
+        "emergency_communication",
+        "other",
+        "unknown"
+      ]
+    },
+    "event_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_outcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "uncertainty_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "annotator_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "annotation_status": {
+      "enum": [
+        "independent",
+        "adjudicated"
+      ]
+    },
+    "annotation_guide_version": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
