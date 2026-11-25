@@ -1,6 +1,6 @@
 # Research Protocol
 
-**Project:** WarBird-AgentBench
+**Project:** PigeonArchive-AgentBench
 **Protocol version:** 0.2.0
 **Research status:** Proposed methodology; expert annotation and empirical evaluation are not yet complete.
 

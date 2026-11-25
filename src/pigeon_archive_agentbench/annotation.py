@@ -1,4 +1,4 @@
-"""Validation utilities for WarBird-AgentBench historical event annotations."""
+"""Validation utilities for PigeonArchive-AgentBench historical event annotations."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set
 
-from warbird_agentbench.corpus import DOCUMENTS
+from pigeon_archive_agentbench.corpus import DOCUMENTS
 
 
 COMMUNICATION_ROLES = {

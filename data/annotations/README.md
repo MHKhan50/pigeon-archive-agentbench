@@ -4,12 +4,12 @@ This directory contains the annotation schema and pilot annotation file.
 
 ## Files
 
-- `../../src/warbird_agentbench/schemas/annotation.schema.json`: JSON Schema Draft 2020-12.
+- `../../src/pigeon_archive_agentbench/schemas/annotation.schema.json`: JSON Schema Draft 2020-12.
 - `pilot_annotations.jsonl`: Reserved for independently produced pilot annotations. It is intentionally empty.
 
 ## Annotation format
 
-Each non-empty JSONL line contains one annotation object. Required fields are defined in `../../src/warbird_agentbench/schemas/annotation.schema.json`. The optional `annotation_guide_version` records the annotation guideline version.
+Each non-empty JSONL line contains one annotation object. Required fields are defined in `../../src/pigeon_archive_agentbench/schemas/annotation.schema.json`. The optional `annotation_guide_version` records the annotation guideline version.
 
 Evidence offsets use Python string indexing: `evidence_start` is zero-based and inclusive; `evidence_end` is exclusive. The evidence text must match the source text at those offsets exactly.
 
@@ -19,7 +19,7 @@ The Python validator checks record structure, field values, unique event IDs, so
 
 Run from the repository root:
 
-    warbird validate-annotations data/annotations/pilot_annotations.jsonl
+    pigeonbench validate-annotations data/annotations/pilot_annotations.jsonl
 
 A successful validation of an empty file means only that zero invalid records were found. It does not establish an annotation dataset or gold standard.
 

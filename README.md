@@ -1,4 +1,4 @@
-# WarBird-AgentBench
+# PigeonArchive-AgentBench
 
 **Research branch:** `research/v0.2.0` | **Baseline:** `v0.1.0`
 
@@ -29,16 +29,16 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 python -m pytest -q
-warbird --help
-warbird demo
+pigeonbench --help
+pigeonbench demo
 ```
 
 ## Main commands
 
 ```bash
-warbird verify --claim "British forces used carrier pigeons during the First World War."
-warbird extract
-warbird validate-annotations data/annotations/pilot_annotations.jsonl
+pigeonbench verify --claim "British forces used carrier pigeons during the First World War."
+pigeonbench extract
+pigeonbench validate-annotations data/annotations/pilot_annotations.jsonl
 ```
 
 The annotation validator checks structure, field values, unique event IDs, source identifiers, and evidence spans. JSON Schema Draft 2020-12 adds structural validation. The pilot file is intentionally empty: zero invalid records does not establish an annotated dataset or gold standard.
@@ -72,4 +72,25 @@ The corpus contains six researcher-written summaries linked to institutional sou
 
 ## Suggested paper title
 
-*WarBird-AgentBench: A Provenance-Aware Agentic NLP Benchmark for Historical Wartime Communication Event Extraction and Evidence Verification*
+*PigeonArchive-AgentBench: A Provenance-Aware Agentic NLP Benchmark for Historical Wartime Communication Event Extraction and Evidence Verification*
+
+## How to cite
+
+```bibtex
+@software{hussain2026pigeonarchive,
+  author = {Hussain, Muzammal},
+  title  = {{PigeonArchive-AgentBench: provenance-aware extraction and verification of historical carrier-pigeon events}},
+  year   = {2026},
+  url    = {https://github.com/MHKhan50/pigeon-archive-agentbench}
+}
+```
+
+## Author
+
+Muzammal Hussain, independent researcher, Glasgow, United Kingdom.
+ORCID: [0009-0001-2570-5686](https://orcid.org/0009-0001-2570-5686)
+
+## Licence
+
+MIT. See `LICENSE`.
+

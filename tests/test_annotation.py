@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from warbird_agentbench.annotation import (
+from pigeon_archive_agentbench.annotation import (
     corpus_source_texts,
     load_jsonl,
     validate_annotation,
@@ -108,7 +108,7 @@ def load_annotation_schema():
     schema_path = (
         Path(__file__).resolve().parents[1]
         / "src"
-        / "warbird_agentbench"
+        / "pigeon_archive_agentbench"
         / "schemas"
         / "annotation.schema.json"
     )

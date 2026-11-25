@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/MHKhan50/warbird-agentbench/blob/main/src/warbird_agentbench/schemas/annotation.schema.json",
-  "title": "WarBird-AgentBench Historical Event Annotation",
+  "$id": "https://github.com/MHKhan50/pigeon-archive-agentbench/blob/main/src/pigeon_archive_agentbench/schemas/annotation.schema.json",
+  "title": "PigeonArchive-AgentBench Historical Event Annotation",
   "description": "Schema for source-grounded historical carrier-pigeon event annotations. This schema validates structure; source-aware evidence and offset checks are performed by the Python validator.",
   "type": "object",
   "additionalProperties": false,

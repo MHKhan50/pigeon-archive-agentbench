@@ -1,6 +1,6 @@
 # Source Licensing and Rights Register
 
-**Project:** WarBird-AgentBench
+**Project:** PigeonArchive-AgentBench
 **Register version:** 0.2.0
 **Review status:** Preliminary desk review; no source has been granted blanket reuse clearance.
 

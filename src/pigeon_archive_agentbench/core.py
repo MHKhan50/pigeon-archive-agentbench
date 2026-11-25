@@ -59,7 +59,7 @@ class ProvenanceAuditorAgent:
         return {"items_checked": len(all_items),
                 "all_items_have_source_url": all(bool(x.get("url") or x.get("source_url")) for x in all_items)}
 
-class WarBirdOrchestrator:
+class PigeonArchiveOrchestrator:
     def __init__(self):
         self.planner = ResearchPlannerAgent()
         self.retriever = ArchiveRetrievalAgent()
@@ -73,7 +73,7 @@ class WarBirdOrchestrator:
         verdict = self.verifier.verify(claim, evidence)
         events = self.extractor.extract(evidence)
         audit = self.auditor.audit(evidence, events)
-        return {"project": "WarBird-AgentBench", "version": "0.1.0", "claim": claim,
+        return {"project": "PigeonArchive-AgentBench", "version": "0.1.0", "claim": claim,
                 "plan": plan, "verdict": verdict, "evidence": evidence,
                 "events": events, "provenance_audit": audit,
                 "agent_trace": [self.planner.name, self.retriever.name, self.extractor.name,
@@ -82,5 +82,5 @@ class WarBirdOrchestrator:
 
     def extract_all(self):
         events = self.extractor.extract(DOCUMENTS)
-        return {"project": "WarBird-AgentBench", "events": events,
+        return {"project": "PigeonArchive-AgentBench", "events": events,
                 "provenance_audit": self.auditor.audit([], events)}

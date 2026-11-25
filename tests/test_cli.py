@@ -1,7 +1,7 @@
 import json
 
-from warbird_agentbench.cli import main
-from warbird_agentbench.annotation import corpus_source_texts
+from pigeon_archive_agentbench.cli import main
+from pigeon_archive_agentbench.annotation import corpus_source_texts
 
 
 def valid_record():
@@ -35,7 +35,7 @@ def test_cli_accepts_empty_annotation_file(tmp_path, monkeypatch, capsys):
     path = tmp_path / "empty.jsonl"
     path.write_text("", encoding="utf-8")
     monkeypatch.setattr(
-        "sys.argv", ["warbird", "validate-annotations", str(path)]
+        "sys.argv", ["pigeonbench", "validate-annotations", str(path)]
     )
 
     assert main() == 0
@@ -48,7 +48,7 @@ def test_cli_accepts_valid_annotation(tmp_path, monkeypatch, capsys):
     path = tmp_path / "valid.jsonl"
     path.write_text(json.dumps(valid_record()) + "\n", encoding="utf-8")
     monkeypatch.setattr(
-        "sys.argv", ["warbird", "validate-annotations", str(path)]
+        "sys.argv", ["pigeonbench", "validate-annotations", str(path)]
     )
 
     assert main() == 0
@@ -63,7 +63,7 @@ def test_cli_rejects_invalid_annotation(tmp_path, monkeypatch, capsys):
     path = tmp_path / "invalid.jsonl"
     path.write_text(json.dumps(record) + "\n", encoding="utf-8")
     monkeypatch.setattr(
-        "sys.argv", ["warbird", "validate-annotations", str(path)]
+        "sys.argv", ["pigeonbench", "validate-annotations", str(path)]
     )
 
     assert main() == 1
@@ -74,7 +74,7 @@ def test_cli_rejects_invalid_annotation(tmp_path, monkeypatch, capsys):
 def test_cli_reports_missing_annotation_file(tmp_path, monkeypatch, capsys):
     path = tmp_path / "missing.jsonl"
     monkeypatch.setattr(
-        "sys.argv", ["warbird", "validate-annotations", str(path)]
+        "sys.argv", ["pigeonbench", "validate-annotations", str(path)]
     )
 
     assert main() == 1

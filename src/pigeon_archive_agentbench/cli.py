@@ -6,12 +6,12 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from .annotation import validate_jsonl
-from .core import WarBirdOrchestrator
+from .core import PigeonArchiveOrchestrator
 
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="warbird",
+        prog="pigeonbench",
         description="Agentic NLP for historical carrier-pigeon records",
     )
     sub = parser.add_subparsers(dest="command", required=True)
@@ -82,7 +82,7 @@ def main():
             print("Annotation validation failed: {}".format(exc), file=sys.stderr)
             return 1
 
-    agent = WarBirdOrchestrator()
+    agent = PigeonArchiveOrchestrator()
 
     if args.command == "verify":
         result = agent.verify(args.claim)
